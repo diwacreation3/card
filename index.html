@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project T  Card </title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+</head>
+<body>
+    <header>
+        <p class="p" >Simple  Card Builder</p>
+        <p>Not available for mobile and tablet </p>
+        <p>Click on text to edit themes will be added later </p>
+    </header>
+    <div class="container" id="cpimg" >
+        <div class="info">
+            <div class="number" contenteditable="true"  > +977 9800000000</div>
+            <div class="Website" contenteditable="true" > www.example.com</div>
+            <div class="email" contenteditable="true" > info@example.com </div>
+        </div>
+        <div class="head">
+            <div class="title" contenteditable="true" >GitHub</div>
+            <div class="addr" contenteditable="true" > San Francisco, California, United States</div>
+        </div>
+        <div class="footer">
+            <div class="details" contenteditable="true"> GitHub is where over 94 million developers shape the future of software, together. Contribute to the open source community, manage your Git repositories </div>
+        </div>
+    </div>
+    <div class="save">
+        <button id="capture" class="btn" > Save As Image</button>
+    </div>
+<div class="download" >
+    <p class="p">Please click right to save as image </p>
+    <h2>Download as Image</h2>
+    <p id="download"></p>
+</div>
+
+<footer>
+    Version 1.0  Build with <span> ❤ </span> By : <a href="https://github.com/diwacreation3"> Diwakar Phuyal</a> :) Nepal 🇳🇵
+</footer>
+   
+<script>
+   const convertBtn = document.getElementById("capture");
+   const preview = document.getElementById("download");
+
+   convertBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    html2canvas(document.querySelector("#cpimg")).then((canvas) => {
+        preview.appendChild(canvas);
+     });
+  });
+</script>
+</body>
+</html> 
